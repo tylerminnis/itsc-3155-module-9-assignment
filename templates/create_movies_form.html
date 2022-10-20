@@ -4,6 +4,15 @@
 
 {% block body %}
 <h1 class="mb-5">Create Movie Rating</h1>
-<p class="mb-3">Create a movie rating below</p>
+<p class="mb-3">Fill out this form to add a movie to our rating database.</p>
 <!-- TODO: Feature 2 -->
+<form>
+<label for="movieTitleInput">Movie Title:</label>
+<input type="text" class="form-control mb-3 mt-1" id="movieTitleInput" aria-describedby="movieTitleInput" placeholder="Avatar" aria-required="true" required>
+
+<label for="movieDirectorInput">Movie Director:</label>
+<input type="text" class="form-control mb-3 mt-1" id="movieDirectorInput" aria-describedby="movieDirectorInput" placeholder="James Cameron" aria-required="true" required>
+
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
 {% endblock %}
