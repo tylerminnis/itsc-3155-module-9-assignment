@@ -15,22 +15,13 @@
       </tr>
     </thead>
     <tbody>
+      {% for movie in all_movies %}
       <tr>
-        <td>Corpse Bride</td>
-        <td>Tim Burton</td>
-        <td>3/5</td>
+        <td>{{movie.title}}</td>
+        <td>{{movie.director}}</td>
+        <td>{{movie.rating}}</td>
       </tr>
-      <tr>
-        <td>Nightmare Before Christmas</td>
-        <td>Tim Burton</td>
-        <td>5/5</td>
-      </tr>
-      <tr>
-        <td>Frankeweenie</td>
-        <td>Tim Burton</td>
-        <td>4/5</td>
-        
-      </tr>
+      {% endfor %}
     </tbody>
   </table>
 
