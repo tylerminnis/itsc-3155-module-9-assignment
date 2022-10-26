@@ -4,6 +4,24 @@
 
 {% block body %}
 <h1 class="mb-5">Create Movie Rating</h1>
-<p class="mb-3">Create a movie rating below</p>
+<p class="mb-3">Fill out this form to add a movie to our rating database.</p>
 <!-- TODO: Feature 2 -->
+<form method="post" action="/movies">
+    <label for="movieTitleInput">Movie Title:</label>
+    <input type="text" class="form-control mb-3 mt-1" id="movieTitleInput" aria-describedby="movieTitleInput" placeholder="Avatar" aria-required="true" required>
+
+    <label for="movieDirectorInput">Movie Director:</label>
+    <input type="text" class="form-control mb-3 mt-1" id="movieDirectorInput" aria-describedby="movieDirectorInput" placeholder="James Cameron" aria-required="true" required>
+
+    <label for="movieRatingInput">Rate this movie from 1 to 5:</label>
+    <select class="form-control mb-3" id="movieRatingInput">
+        <option value="5">5</option>
+        <option value="4">4</option>
+        <option value="3">3</option>
+        <option value="2">1</option>
+        <option value="1">2</option>
+    </select>
+
+    <button type="submit" class="btn btn-primary" name="addMovieButton">Submit</button>
+</form>
 {% endblock %}
