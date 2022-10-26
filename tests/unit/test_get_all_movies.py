@@ -22,5 +22,5 @@ def test_get_all_movies_wrong():
     movie_repository.create_movie('Morbius', "Daniel Espinosa", 1)
     response = test_app.get('/movies')
     assert not b'<td>Morbo</td>' in response.data
-    assert b'<td>Daniel Espinosa</td>' in response.data
-    assert b'<td>1</td>' in response.data
+    assert not b'<td>Daniel Spouse</td>' in response.data
+    assert not b'<td>4</td>' in response.data
