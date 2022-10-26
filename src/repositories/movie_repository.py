@@ -11,9 +11,8 @@ def get_movie_repository():
 
         def __init__(self) -> None:
             self._db: list[Movie] = []
-
+        
         def get_all_movies(self) -> list[Movie]:
-            """Simply return all movies from the in-memory database"""
             return self._db
 
         def get_movie_by_title(self, title: str) -> Movie | None:
